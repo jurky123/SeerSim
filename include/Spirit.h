@@ -5,6 +5,8 @@
 #include "Skill.h"
 #include "Damage.h"
 #include <vector>
+#include "Help_Funcs.h"
+
 class Spirit
 {
 public:

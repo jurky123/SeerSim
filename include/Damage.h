@@ -27,4 +27,10 @@ public:
     CommonDamage(int power, int type, bool is_physical);
     ~CommonDamage();
     virtual void apply(Spirit* spirit) override;//应用伤害效果
+    int get_power() const;
+    int get_type() const;
+    bool is_physical_damage() const;
+    void set_power(int power);
+    void set_type(int type);
+    void set_is_physical(bool is_physical);
 };
