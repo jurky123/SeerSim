@@ -11,16 +11,14 @@ int CommonDamage::get_power() const
 
 
 
-int CommonDamage::get_type() const
+int CommonDamage::get_attribute_type() const
 {
-    return type;
+    return attribute_type;
 }
-void CommonDamage::set_type(int type)
+void CommonDamage::set_attribute_type(int type)
 {
-    this->type = type;
+    this->attribute_type = type;
 }
-
-
 
 bool CommonDamage::is_physical_damage() const
 {

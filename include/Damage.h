@@ -21,16 +21,16 @@ class CommonDamage : public Damage
 {
 private:
     int power;//威力
-    int type;//属性类型
+    int attribute_type;//属性类型
     bool is_physical;//是否为物理伤害
 public:
     CommonDamage(int power, int type, bool is_physical);
     ~CommonDamage();
     virtual void apply(Spirit* spirit) override;//应用伤害效果
     int get_power() const;
-    int get_type() const;
+    int get_attribute_type() const;
     bool is_physical_damage() const;
     void set_power(int power);
-    void set_type(int type);
+    void set_attribute_type(int type);
     void set_is_physical(bool is_physical);
 };

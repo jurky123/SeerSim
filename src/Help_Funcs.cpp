@@ -10,11 +10,23 @@ def：防御方防御
 fix：本系修正
 advantage：克制系数
 */
-int calc_damage_origin(int lv,int pow,int atk,int def,int fix,float advantage){
+int calc_damage_origin(int lv,int pow,int atk,int def,float fix,float advantage){
     // 创建随机数生成器
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(217, 255);  // 生成217-255之间的随机数
     int random_factor = dis(gen);
-    return  ((float(lv)*0.4*(float(pow)*(float(atk)/float(def)))/50.0 + 2)*advantage*(float(random_factor)/255.0)*float(fix));
+    return  ((float(lv)*0.4*(float(pow)*(float(atk)/float(def)))/50.0 + 2)*advantage*(float(random_factor)/255.0)*fix);
+}
+/*
+* 计算克制系数
+* @param lv 等级
+* @param atk_attri 攻击属性
+* @param def_attri 防御属性
+* @return 克制系数
+* 目前没有设计属性克制表，所以暂时返回1.0
+*/
+float get_advantage(int atk_attri,int def_attri){
+    //暂时先返回1.0，后续再完善属性克制表
+    return 1.0f;
 }
