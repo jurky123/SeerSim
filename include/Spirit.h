@@ -11,6 +11,15 @@ public:
     ~Spirit();
     void take_damage(int damage);
     void heal(int amount);
+    
+    int get_health() const;
+    std::string get_name() const; //获取精灵名字
+    int get_level() const; //获取精灵等级
+
+    void set_name(const std::string& new_name); //设置精灵名字
+    void set_level(int new_level); //设置精灵等级
+    void set_health(int new_health); //设置精灵血量
+    void set_stats(const BaseStats& new_stats); //设置精灵种族值
 private:
     int id;
     std::string name;
