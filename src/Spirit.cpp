@@ -90,6 +90,11 @@ void Spirit::take_damage(Damage* damage , Spirit* attacker)
             common_damage->get_attribute_type() == attacker->get_attribute_type() ? 1.1 : 1.0,
             advantage
         );
+        // 检查是否死亡
+        if (health <= 0) {
+            health = 0;
+        }
+        //这里可能需要在受伤后计算回血，弹伤，复活之类的效果，以及一些受击效果，暂时没有实现。
     }
 
 }
