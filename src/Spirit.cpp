@@ -24,3 +24,7 @@ void Spirit::set_name(const std::string& new_name)
 {
     name = new_name;
 }
+void Spirit::take_damage(Damage* damage)
+{
+    
+}

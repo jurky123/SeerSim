@@ -23,4 +23,8 @@ private:
     int power;//威力
     int type;//属性类型
     bool is_physical;//是否为物理伤害
+public:
+    CommonDamage(int power, int type, bool is_physical);
+    ~CommonDamage();
+    virtual void apply(Spirit* spirit) override;//应用伤害效果
 };
