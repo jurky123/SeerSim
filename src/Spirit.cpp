@@ -1,5 +1,5 @@
 #include "Spirit.h"
-
+//设置精灵血量
 int Spirit::get_health() const
 {
     return health;
@@ -9,7 +9,7 @@ void Spirit::set_health(int health)
     this->health = health;
 }
 
-
+//设置精灵等级
 int Spirit::get_level() const
 {
     return level;
@@ -19,7 +19,7 @@ void Spirit::set_level(int level)
     this->level = level;
 }
 
-
+//设置精灵名字
 std::string Spirit::get_name() const
 {
     return name;
@@ -29,7 +29,7 @@ void Spirit::set_name(const std::string& new_name)
     name = new_name;
 }
 
-
+//设置精灵属性类型
 int Spirit::get_attribute_type() const
 {
     return attribute_type;
@@ -39,7 +39,7 @@ void Spirit::set_attribute_type(int attribute_type)
     this->attribute_type = attribute_type;
 }
 
-
+//设置精灵基础属性
 BaseStats Spirit::get_stats() const
 {
     return stats;
@@ -51,7 +51,7 @@ void Spirit::set_stats(const BaseStats& new_stats)
 }
 
 
-
+//设置精灵id
 int Spirit::get_id() const
 {
     return id;
@@ -60,6 +60,19 @@ void Spirit::set_id(int id)
 {
     this->id = id;
 }
+
+
+bool Spirit::get_is_death() const
+{
+    return is_death;
+}
+void Spirit::set_is_death(bool status)
+{
+    is_death = status;
+}
+
+
+
 
 void Spirit::take_damage(Damage* damage , Spirit* attacker)
 {

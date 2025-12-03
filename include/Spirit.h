@@ -29,6 +29,9 @@ public:
     void set_health(int new_health); //设置精灵血量
     void set_stats(const BaseStats& new_stats); //设置精灵种族值
     void take_damage(Damage* damage , Spirit* attacker);//受到伤害
+    void take_heal(Damage* damage , Spirit* attacker);//治疗
+    bool get_is_death() const; //获取是否死亡状态
+    void set_is_death(bool status); //设置是否死亡状态
 private:
     int id;
     std::string name;
@@ -38,6 +41,7 @@ private:
     Ability ability;//能力值
     int exp; //经验值
     int attribute_type;//属性类型
+    bool is_death;//是否死亡
 
     std::vector<Skill> skill_pool;//技能池
     std::vector<Skill> skills;//已学习技能
